@@ -42,7 +42,16 @@ public class AddressBookProgram {
 
     public static void main(String[] args) {
         //System.out.println("Welcome to Address Book");
-        address();
+        //address();
+
+        AddressBookProgram contact1 = new AddressBookProgram();
+        System.out.println("Enter Details for contact1");
+        contact1.address();
+
+        AddressBookProgram contact2 = new AddressBookProgram();
+        System.out.println("Enter Details for contact2");
+        contact2.address();
+
     }
 
 
