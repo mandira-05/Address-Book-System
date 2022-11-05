@@ -135,12 +135,20 @@ public class AddressBookProgram {
             }
         }
 
+        public void deleteContact(ArrayList<ContactItems> contactList) {
+            System.out.println("Enter first name of contact you want to delete");
+            String delete = scanner.next();
+            contactList.removeIf(contactItems -> contactItems.firstName.equals(delete));
+        }
+
+
         public void addContactList() {
             while (true) {   ///should run always
                 System.out.println("Press 0 - Display all contacts");
                 System.out.println("Press 1 - Add contact");
                 System.out.println("Press 2 - Edit contact");
-                System.out.println("Press 3 - Exit");
+                System.out.println("Press 3 - Delete a contact");
+                System.out.println("Press 4 - Exit");
 
 
                 int option= scanner.nextInt();
@@ -155,11 +163,15 @@ public class AddressBookProgram {
                     case 2:
                         editContact();
                         break;
+                    case 3:
+                        deleteContact(contactList);
+                        break;
 
                 }
-                if (option == 3) {
+                if (option == 4) {
                     break;
                 }
             }
         }
+
 }
