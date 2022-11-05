@@ -17,37 +17,44 @@ public class AddressBookProgram {
         }
 
         //Method to add a contact
-        public void addContact(ContactItems contactItems, ArrayList <ContactItems> contactList){
+        public void addContact(ContactItems contactItems, ArrayList <ContactItems> contactList) {
+            System.out.println("Enter number of contact you want to add in address book");
 
-            contactItems = new ContactItems();
+            //adds multiple contact 
+            int numberOfContacts = scanner.nextInt();
+            for (int a = 1; a <= numberOfContacts; a++) {
 
-            System.out.println("Enter first name");
-            contactItems.firstName = scanner.next();
+                contactItems = new ContactItems();
+                System.out.println("Contact: " + a);
 
-            System.out.println("Enter last name");
-            contactItems.lastName = scanner.next();
+                System.out.println("Enter first name");
+                contactItems.firstName = scanner.next();
 
-            System.out.println("Enter Address");
-            contactItems.address = scanner.next();
+                System.out.println("Enter last name");
+                contactItems.lastName = scanner.next();
 
-            System.out.println("Enter city");
-            contactItems.city = scanner.next();
+                System.out.println("Enter Address");
+                contactItems.address = scanner.next();
 
-            System.out.println("Enter state");
-            contactItems.state = scanner.next();
+                System.out.println("Enter city");
+                contactItems.city = scanner.next();
 
-            System.out.println("Enter zip code");
-            contactItems.pinCode = scanner.nextInt();
+                System.out.println("Enter state");
+                contactItems.state = scanner.next();
 
-            System.out.println("Enter phone number");
-            contactItems.phoneNumber = scanner.nextLong();
+                System.out.println("Enter zip code");
+                contactItems.pinCode = scanner.nextInt();
 
-            System.out.println("Enter Email");
-            contactItems.email = scanner.next();
+                System.out.println("Enter phone number");
+                contactItems.phoneNumber = scanner.nextLong();
 
-           contactList.add(contactItems);
+                System.out.println("Enter Email");
+                contactItems.email = scanner.next();
+
+                contactList.add(contactItems);
 
 
+            }
         }
 
         //Method to edit existing contact in address book
